@@ -7,7 +7,7 @@ app.use(express.json());
 // Replace with your details
 const FULL_NAME = "vedant_girawale";
 const DOB = "15102004"; // ddmmyyyy
-const EMAIL = "vedant@gmail.com";
+const EMAIL = "vedant.22bce7674@vitapstudent.ac.in";
 const ROLL_NUMBER = "22BCE7674";
 
 app.post("/bfhl", (req, res) => {
