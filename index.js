@@ -1,12 +1,11 @@
-// index.js
 import express from "express";
 
 const app = express();
 app.use(express.json());
 
-// Replace with your details
+// My details
 const FULL_NAME = "vedant_girawale";
-const DOB = "15102004"; // ddmmyyyy
+const DOB = "15102004";
 const EMAIL = "vedant.22bce7674@vitapstudent.ac.in";
 const ROLL_NUMBER = "22BCE7674";
 
@@ -17,7 +16,7 @@ app.post("/bfhl", (req, res) => {
     if (!data || !Array.isArray(data)) {
       return res.status(400).json({
         is_success: false,
-        message: "Invalid input. Expected { data: [ ... ] }",
+        message: "Invalid input",
       });
     }
 
@@ -39,16 +38,13 @@ app.post("/bfhl", (req, res) => {
           odd_numbers.push(item);
         }
       } else if (/^[a-zA-Z]$/.test(item)) {
-        // only 1 letter (as per assignment)
         alphabets.push(item.toUpperCase());
         lettersForConcat.push(item);
       } else {
-        // anything else → special
         special_characters.push(item);
       }
     });
 
-    // Build alternating caps reverse string
     let concat_string = lettersForConcat
       .join("")
       .split("")
@@ -77,7 +73,6 @@ app.post("/bfhl", (req, res) => {
   }
 });
 
-// Extra GET route (the assignment usually requires this)
 app.get("/bfhl", (req, res) => {
   res.json({ operation_code: 1 });
 });
