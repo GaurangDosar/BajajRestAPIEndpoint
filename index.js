@@ -3,11 +3,13 @@ import express from "express";
 const app = express();
 app.use(express.json());
 
-// My details
-const FULL_NAME = "vedant_girawale";
-const DOB = "15102004";
-const EMAIL = "vedant.22bce7674@vitapstudent.ac.in";
-const ROLL_NUMBER = "22BCE7674";
+// ==== YOUR DETAILS ====
+const FULL_NAME = "gaurang_dosar";                
+const DOB = "20012004";                  
+const EMAIL = "gaurang.22bce7438@vitapstudent.ac.in";
+const ROLL_NUMBER = "22BCE7438";
+// ======================
+
 
 app.post("/bfhl", (req, res) => {
   try {
